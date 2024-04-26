@@ -51,11 +51,14 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Subject</th>
+                <th>Service Request Type</th>
                 <th>Message</th>
                 <th>Submission Date</th>
                 <th>Status</th>
                 <th>Resolution Date</th>
+                {% if user == 'admin' %}
                 <th>Update Status</th>
+                {% endif %}
             </tr>
         </thead>
         <tbody>
@@ -65,6 +68,7 @@
                 <td>{{ myrequest.name }}</td>
                 <td>{{ myrequest.email }}</td>
                 <td>{{ myrequest.subject }}</td>
+                <td>{{ myrequest.service_request_type }}</td>
                 <td>{{ myrequest.message }}</td>
                 <td>{{ myrequest.submission_date }}</td>
                 <td>{{ myrequest.status }}</td>
